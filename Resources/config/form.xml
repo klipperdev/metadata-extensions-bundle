@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="klipper_metadata_extensions.form.type.role_permission" class="Klipper\Component\MetadataExtensions\Form\Type\RolePermissionType" public="true">
+            <tag name="form.type"/>
+            <argument type="service" id="klipper_metadata_extensions.permission_metadata_manager"/>
+        </service>
+
+        <service id="klipper_metadata_extensions.form.type.role_object_permission" class="Klipper\Component\MetadataExtensions\Form\Type\RoleObjectPermissionType" public="true">
+            <tag name="form.type"/>
+            <argument type="service" id="klipper_metadata_extensions.permission_metadata_manager"/>
+        </service>
+    </services>
+
+</container>

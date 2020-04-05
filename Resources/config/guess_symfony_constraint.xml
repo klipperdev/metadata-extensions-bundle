@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Symfony Constraint Metadata Guess Config -->
+        <service id="klipper_metadata_extensions.guess.symfony_constraint_config"
+                 class="Klipper\Component\MetadataExtensions\Guess\GuessSymfonyConstraint"
+                 public="false">
+            <tag name="klipper_metadata.guess"/>
+            <argument type="service" id="validator.mapping.class_metadata_factory"/>
+            <argument type="collection"/>
+        </service>
+
+        <!-- Symfony Constraint Metadata Guess -->
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\AllGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\BicGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\CardSchemeGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\ChoiceGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\CollectionGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\CountGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\CountryGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\CurrencyGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\DateGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\DateTimeGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\DivisibleByGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\EmailGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\EqualToGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\EntityChoiceGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\FileGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\GreaterThanGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\GreaterThanOrEqualGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IbanGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IdenticalToGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\ImageGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IpGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IsbnGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IsFalseGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IsNullGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IssnGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\IsTrueGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\JsonGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\LengthGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\LanguageGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\LessThanGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\LessThanOrEqualGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\LocaleGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\LuhnGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\NegativeGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\NegativeOrZeroGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\NotBlankGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\NotEqualToGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\NotIdenticalToGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\NotNullGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\PositiveGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\PositiveOrZeroGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\RangeGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\RegexGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\TimeGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\TypeGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\UrlGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\UniqueGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint" priority="-100"/>
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Guess\GuessConstraint\UuidGuessConstraint">
+            <tag name="klipper_metadata_extensions.guess.symfony_constraint"/>
+        </service>
+    </services>
+</container>

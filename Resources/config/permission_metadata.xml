@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="klipper_metadata_extensions.permission_metadata_manager" class="Klipper\Component\MetadataExtensions\Permission\PermissionMetadataManager" public="true">
+            <argument type="service" id="klipper_metadata.manager" />
+            <argument type="service" id="klipper_security.permission_manager" />
+            <argument type="service" id="translator" />
+            <argument type="service" id="security.authorization_checker" />
+        </service>
+
+        <service id="Klipper\Component\MetadataExtensions\Permission\PermissionMetadataManager" alias="klipper_metadata_extensions.permission_metadata_manager" />
+        <service id="Klipper\Component\MetadataExtensions\Permission\PermissionMetadataManagerInterface" alias="klipper_metadata_extensions.permission_metadata_manager" />
+    </services>
+</container>

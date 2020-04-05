@@ -1,0 +1,19 @@
+Klipper\Component\MetadataExtensions\Permission\ObjectPermissionMetadata:
+    exclusion_policy: ALL
+    properties:
+        permissions:
+            groups: [Default]
+        fields:
+            groups: [Default]
+        associations:
+            groups: [Default]
+    virtual_properties:
+        getName:
+            groups: [Default]
+        getLabel:
+            groups: [Default]
+        getDescription:
+            groups: [Default]
+        hasEditablePermissions:
+            groups: [Default]
+            serialized_name: editable_permissions

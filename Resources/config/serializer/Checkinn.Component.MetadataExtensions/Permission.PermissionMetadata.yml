@@ -1,0 +1,16 @@
+Klipper\Component\MetadataExtensions\Permission\PermissionMetadata:
+    exclusion_policy: ALL
+    properties:
+        label:
+            groups: [Default]
+        description:
+            groups: [Default]
+        granted:
+            groups: [Default]
+        locked:
+            groups: [Default]
+    virtual_properties:
+        getOperation:
+            groups: [Default]
+        getContexts:
+            groups: [Default]
