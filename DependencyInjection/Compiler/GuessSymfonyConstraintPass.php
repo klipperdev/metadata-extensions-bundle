@@ -22,9 +22,6 @@ class GuessSymfonyConstraintPass implements CompilerPassInterface
 {
     use PriorityTaggedServiceTrait;
 
-    /**
-     * {@inheritdoc}
-     */
     public function process(ContainerBuilder $container): void
     {
         if (!$container->hasDefinition('klipper_metadata_extensions.guess.symfony_constraint_config')) {

@@ -35,8 +35,6 @@ use Symfony\Component\Validator\Validation;
 class KlipperMetadataExtensionsExtension extends Extension
 {
     /**
-     * {@inheritdoc}
-     *
      * @throws \Exception
      */
     public function load(array $configs, ContainerBuilder $container): void
@@ -44,8 +42,7 @@ class KlipperMetadataExtensionsExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $directory = __DIR__.'/../Resources/config';
-        $loader = new Loader\XmlFileLoader($container, new FileLocator($directory));
+        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         if (class_exists(EntityManager::class)) {
             $loader->load('guess_doctrine.xml');
