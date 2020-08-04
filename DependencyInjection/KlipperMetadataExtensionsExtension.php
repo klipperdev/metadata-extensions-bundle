@@ -95,6 +95,7 @@ class KlipperMetadataExtensionsExtension extends Extension
         $container->getDefinition('klipper_metadata_extensions.guess.doctrine_config')
             ->replaceArgument(1, $config['mapping_field_types'])
             ->replaceArgument(2, $config['mapping_association_types'])
+            ->replaceArgument(3, $config['mapping_field_type_inputs'])
         ;
     }
 
