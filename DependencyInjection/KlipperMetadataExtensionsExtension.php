@@ -16,6 +16,7 @@ use Gedmo\Translatable\TranslatableListener;
 use JMS\SerializerBundle\JMSSerializerBundle;
 use Klipper\Component\MetadataExtensions\Guess\GuessConstraint\UserPasswordGuessConstraint;
 use Klipper\Component\Security\Permission\PermissionManager;
+use Klipper\Contracts\Model\SortableInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -81,6 +82,10 @@ class KlipperMetadataExtensionsExtension extends Extension
                 && class_exists(Translator::class)
                 && class_exists(AuthorizationChecker::class)) {
             $loader->load('permission_metadata.xml');
+        }
+
+        if (interface_exists(SortableInterface::class)) {
+            $loader->load('guess_default_sortable.xml');
         }
     }
 
