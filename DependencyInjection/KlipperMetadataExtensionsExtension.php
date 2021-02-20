@@ -17,6 +17,7 @@ use JMS\SerializerBundle\JMSSerializerBundle;
 use Klipper\Component\MetadataExtensions\Guess\GuessConstraint\UserPasswordGuessConstraint;
 use Klipper\Component\Security\Permission\PermissionManager;
 use Klipper\Contracts\Model\SortableInterface;
+use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -86,6 +87,10 @@ class KlipperMetadataExtensionsExtension extends Extension
 
         if (interface_exists(SortableInterface::class)) {
             $loader->load('guess_default_sortable.xml');
+        }
+
+        if (class_exists(TwigBundle::class)) {
+            $loader->load('twig.xml');
         }
     }
 
