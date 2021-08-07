@@ -24,7 +24,7 @@
         "klipper/doctrine-extensions": "^2.0.0",
         "klipper/security": "^2.0.0",
         "klipper/security-bundle": "^2.0.0",
-        "jms/serializer-bundle": "^3.7.0",
+        "jms/serializer-bundle": "^3.10.0",
         "symfony/event-dispatcher": "^5.2.0",
         "symfony/form": "^5.2.0",
         "symfony/translation": "^5.2.0",
