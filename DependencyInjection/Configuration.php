@@ -25,6 +25,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('klipper_metadata_extensions');
+
         /** @var ArrayNodeDefinition $rootNode */
         $rootNode = $treeBuilder->getRootNode();
         $rootNode
@@ -40,6 +41,7 @@ class Configuration implements ConfigurationInterface
     private function getGuessersNode(): ArrayNodeDefinition
     {
         $treeBuilder = new TreeBuilder('guessers');
+
         /** @var ArrayNodeDefinition $node */
         $node = $treeBuilder->getRootNode();
         $node
