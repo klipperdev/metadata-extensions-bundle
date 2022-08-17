@@ -18,7 +18,7 @@
         "klipper/metadata-extensions": "^2.0.0"
     },
     "require-dev": {
-        "doctrine/orm": "^2.8.0",
+        "doctrine/orm": "^2.13.0",
         "gedmo/doctrine-extensions": "^3.0.0",
         "klipper/choice": "^2.0.0",
         "klipper/doctrine-extensions": "^2.0.0",
