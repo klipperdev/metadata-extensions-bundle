@@ -54,6 +54,7 @@ class KlipperMetadataExtensionsExtension extends Extension
             }
 
             $this->configGuessDoctrine($container, $config['guessers']['doctrine']);
+            $this->loadChoiceMetadata($container, $config['choices']);
         }
 
         if (class_exists(JMSSerializerBundle::class)) {
@@ -136,5 +137,13 @@ class KlipperMetadataExtensionsExtension extends Extension
             ->replaceArgument(0, $config['mapping_input_types'])
             ->replaceArgument(1, $config['form_options'])
         ;
+    }
+
+    /**
+     * @param string[] $choices The class names implementing ChoiceInterface
+     */
+    private function loadChoiceMetadata(ContainerBuilder $container, array $choices): void
+    {
+        $container->setParameter('klipper_metadata_extensions.config.choices', $choices);
     }
 }

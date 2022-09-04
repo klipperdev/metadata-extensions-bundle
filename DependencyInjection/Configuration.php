@@ -30,6 +30,7 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->getRootNode();
         $rootNode
             ->append($this->getGuessersNode())
+            ->append($this->getChoicesNode())
         ;
 
         return $treeBuilder;
@@ -83,6 +84,22 @@ class Configuration implements ConfigurationInterface
             ->end()
             ->end()
             ->end()
+        ;
+
+        return $node;
+    }
+
+    /**
+     * Get choices node.
+     */
+    private function getChoicesNode(): ArrayNodeDefinition
+    {
+        $treeBuilder = new TreeBuilder('choices');
+
+        /** @var ArrayNodeDefinition $node */
+        $node = $treeBuilder->getRootNode();
+        $node
+            ->scalarPrototype()->end()
         ;
 
         return $node;

@@ -11,6 +11,7 @@
 
 namespace Klipper\Bundle\MetadataExtensionsBundle;
 
+use Klipper\Bundle\MetadataExtensionsBundle\DependencyInjection\Compiler\ConfigChoicePass;
 use Klipper\Bundle\MetadataExtensionsBundle\DependencyInjection\Compiler\GuessSymfonyConstraintPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -24,5 +25,6 @@ class KlipperMetadataExtensionsBundle extends Bundle
     {
         parent::build($container);
         $container->addCompilerPass(new GuessSymfonyConstraintPass());
+        $container->addCompilerPass(new ConfigChoicePass());
     }
 }
